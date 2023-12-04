@@ -1,0 +1,8 @@
+#String definieren
+g = " 8 "
+h = " 3 "
+i = " 5 "
+j = " 7 "
+#als integer ausgeben lassen
+# und integer (g, h, i, j) addieren
+print ( int (g) + int (h) + int (i) + int(j))
