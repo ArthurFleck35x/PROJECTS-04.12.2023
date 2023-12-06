@@ -1,0 +1,17 @@
+
+fruits = ["apple" , "orange" , "lemon" , "mago" , "banana"]
+
+colour = ["red" , "orange" , "yellow"]
+red = (fruits [0])
+orange = (fruits [1]) + (fruits [3])
+yellow = (fruits [2]) + (fruits [4])
+
+print ("start")
+print("those fruits are given:" + fruits + "they have different colours")
+print("which colour has an apple? ")
+colour = input()
+    if input("red")
+    print( "You are right! An apple is red.")
+    else 
+    print ("Try it again please, your guess was not right")
+    
