@@ -1,0 +1,9 @@
+#Algorithmus von Euklid
+a = int( input (" Gib die erste Zahl ein" ))
+b = int( input (" Gib die zweite Zahl ein"))
+rest = a % b
+while (rest != 0):
+  a = b
+  b = rest
+  rest = a % b
+print ("Der ggT ist" , b)
