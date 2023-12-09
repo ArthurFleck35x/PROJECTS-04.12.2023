@@ -1,0 +1,15 @@
+age= 56
+
+
+if age < 6:
+    print ("Kind")
+
+else :
+    if age < 18:
+        print ("Jugendlicher")
+
+if age <64:
+    print("Erwachsener")
+
+if age >65:
+    print("Rentner")
