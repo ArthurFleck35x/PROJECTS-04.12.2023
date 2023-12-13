@@ -1,0 +1,7 @@
+age = 45
+
+if age < 40:
+    print ("Alter ist kleiner als 40mausgeführt") 
+
+if not age >= 40:
+    print ("Alter ist größer/gleich 40, ausgeführt ") 
