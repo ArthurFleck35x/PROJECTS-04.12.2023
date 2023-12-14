@@ -1,0 +1,18 @@
+#öffne mir die Datei "Day1-2015.txt" zum lesen ("r")
+with open ("Day1-2015.txt", "r") as file:
+    #für jede Zeile der Datei
+    for line in file:
+        #Variable definieren
+        Lichterkette = line
+print (Lichterkette)
+#Datei aufspalten
+Sternchen = [char for char in Lichterkette]
+#zähler Variable hinzufügen, beginnt mit 0
+counter = 0
+for Stern in Sternchen:
+    if Stern == "(":
+        counter = counter +1
+    else :
+        counter = counter -1
+#counter ausgeben, nach der for Schleife
+print (counter)
