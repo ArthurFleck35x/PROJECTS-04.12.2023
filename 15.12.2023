@@ -1,0 +1,9 @@
+students = ["Johanna", "Kai", "Jan", "Louisa"]
+
+print ("Kai" in students)
+print ("Alex" in students)
+
+if "Andrea" in students:
+  print ("Ja, Andrea studiert hier")
+else:
+  print ("Nein, sie studiert warscheinlich an einem anderen Ort aber nicht hier")
