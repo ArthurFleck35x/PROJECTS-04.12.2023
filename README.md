@@ -1,3 +1,16 @@
+Hier zeige ich euch alle meine Programme
+
+#Day1: Als allererstes habe ich einen Summenberechner programmiert. 
+
+
+#Day2:
+#Day3:
+#Day4:
+#Day5:
+#Day6:
+#Day7:
+
+
 # PROJECTS-04.12.2023
 #05.12.2023
 fruits = ["apple" , "orange" , "lemon" , "mago" , "banana"]
