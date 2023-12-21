@@ -1,0 +1,18 @@
+#statt statischer Variable 
+class Car:
+  price = "expensive"
+  print(price)
+
+c = Car()
+print(c.price)
+
+Car.price = "cheap"
+print(c.price)
+
+#lieber Instanzvariable festlegen
+class Car:
+  def_init_(self):
+    self.price = "expensive"
+
+c = Car()
+print(c.price)
