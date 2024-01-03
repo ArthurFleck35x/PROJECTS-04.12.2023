@@ -1,0 +1,3 @@
+fruits = ["Apfel", "Banane", "Orange", "Kiwi", "Mango"]
+for fruit in fruits:
+    print(f"Die Länge von {fruit} ist {len(fruit)}")
