@@ -1,0 +1,9 @@
+zahl = int(input("Gib eine Zahl ein: "))
+
+
+if zahl > 0:
+    print(f"Die Zahl {zahl} ist positiv.")
+elif zahl == 0:
+    print("Die Zahl ist Null.")
+else:
+    print(f"Die Zahl {zahl} ist negativ.")
