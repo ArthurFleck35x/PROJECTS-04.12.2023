@@ -1,0 +1,7 @@
+zahl = int(input("Gib eine Zahl ein: "))
+
+
+if zahl % 2 == 0:
+    print(f"Die Zahl {zahl} ist gerade.")
+else:
+    print(f"Die Zahl {zahl} ist ungerade.")
