@@ -1,0 +1,23 @@
+#Sample list of strings:
+names= ["Mark Rober", "Backyard Scientist", "Vsauce"]
+
+#Sample string:
+youtuber="Vsauce"
+
+#My code is here:
+games= ["super mario bross", "legend of zelda", "chess", "clash of clans", "clash royal", "candy crush", "slither.io", "best friends", "farm ville", "farmfrenzy", "mahjong", "among us", "uno", "blooons tower defense", "monopoly", "minecraft", "angry bird", "farming simulator", "hungry shark", "plants vs. zombies", "crossy road", "temple run", "sims", "animal crossing", "pokemon red", "pokemon blue", "pokemon go", "pokemon scarlet", "pokemon purpur", "magic", "phase ten"]
+
+#my sample string:
+pokemon= "pokemon"
+
+#my sorted list of games:
+games.sort ()
+print (games)
+
+print (" ")
+
+#my pokemon games list
+print ("list of pokemon games:")
+for element in games:
+    if element.startswith(pokemon):
+        print (element)
