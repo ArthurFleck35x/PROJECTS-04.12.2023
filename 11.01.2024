@@ -1,0 +1,63 @@
+pie_tuple = ('pie', 3.14, 'pi', 3)
+#'pie'
+print(pie_tuple[0])
+
+
+
+text = 'Strings can be accessed via indexes!'
+
+print(text[1])
+# 't'
+
+
+a, b = 'hard', 'working' 
+a, b = b, a
+
+print(a, b)
+# working hard
+
+
+flash = ('Barry', 'Allen' , 27)
+(first_name, last_name, age) = flash
+
+print(first_name)
+# Barry
+
+print(age)
+# 27
+
+
+a, *b, c = (1, 2, 3, 4, 5)
+
+print(b)
+# [2, 3, 4]
+
+
+
+d, e = 3, 4
+d, e = e, d
+print(d, e)
+
+# 4 3
+
+vowels = ('a', 'e', 'i', 'o', 'u')
+
+vowels.index('e')
+# 1
+
+
+
+vowels = ('a', 'e', 'i', 'i', 'o', 'u')
+
+vowels.index('i')
+# 2
+
+
+vowels.count('i')
+# 2
+
+
+beatles = ('John', 'Ringo', 'George', 'Paul')
+
+beatles.index('George')
+# 2
