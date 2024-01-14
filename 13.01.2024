@@ -1,0 +1,29 @@
+# Welcome to the Python coding playground.
+
+# Sample list of strings:
+names = ["Mark Rober", "Backyard Scientist", "Vsauce"]
+
+# Sample string:
+youtuber = "Vsauce"
+
+# Type your code here:
+for youtuber in names:
+    print (youtuber +" is in my list")
+
+#Mark Rober is in my list
+#Backyard Scientist is in my list
+#Vsauce is in my list
+
+
+
+
+# Sample list of strings:
+names = ["Mark Rober", "Backyard Scientist", "Vsauce"]
+
+# Sample string:
+youtuber = "Vsauce"
+
+# Type your code here:
+if youtuber in names:
+    print (youtuber +" is in my list")
+#Vsauce is in my list
