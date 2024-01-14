@@ -1,0 +1,11 @@
+# Welcome to the Python coding playground. 
+# Populate this tuple:
+
+myTuple = []  
+myTuple.append(int(5))
+myTuple.append(2.2316)
+myTuple.append("hallihallo")
+myTuple.append(3.9879452416783)
+
+print(myTuple[3])
+#3.9879452416783
