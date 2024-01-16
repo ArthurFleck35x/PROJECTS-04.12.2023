@@ -1,0 +1,146 @@
+set = {'clubs', 'hearts', 'spades', 'diamonds'}
+
+my_set = {1, "Hello", (1, 2, 3)}
+
+# OR
+
+my_set = set([1, "Hello", (1, 2, 3)])
+
+#Sets are an unordered data type. Items inside a set can be of any data type, but each item must be unique.
+
+my_set = {'dog', 'cat', 'rabbit'}
+
+my_set.add('parrot')
+
+print(my_set)
+# {'dog', 'cat', 'rabbit', 'parrot'}
+
+my_set.update(['horse', 'dog'])
+
+print(my_set)
+# {'rabbit', 'parrot', 'cat', 'horse', 'dog'}
+
+
+my_set.remove('dog')
+my_set.discard('goldfish')
+
+print(my_set)
+# {'rabbit', 'parrot', 'cat', 'horse'}
+
+
+#Which of the following are both valid set methods? update() and add()
+
+usingBrackets = {}
+
+usingDict = dict()
+
+
+my_dict = {
+    'name': 'Jack', 
+    'age': 26
+}
+
+
+my_dict['name']
+# Jack
+my_dict['age']
+# 26
+
+
+preferences = {
+    'fruit': 'apple', 
+    'car': 'Tesla'
+}
+more_preferences = {
+    'fruit': 'pear',
+    'animal': 'dog'
+}
+
+preferences.update(more_preferences)
+
+print(preferences)
+# {
+#   'fruit': 'pear', 
+#   'car': 'Tesla', 
+#   'animal': 'dog'
+# }
+
+animals = {
+    'cat': 'persian', 
+    'dog': 'pug'
+}
+
+animals['dog']
+# pug
+
+
+square_numbers = {
+  1: 1,
+  2: 4,
+  3: 9, 
+  4: 16, 
+  5: 25
+}
+
+
+square_numbers.clear()
+
+print(square_numbers)
+# {}
+
+
+new = square_numbers.copy()
+
+print(new)
+# {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+square_numbers.items()
+
+print(square_numbers.items())
+# dict_items([(1, 1), (2, 4), (3, 9), (4, 16), (5, 25)])
+
+my_house = {'bedrooms': 2, 'bathrooms': 2, 'garden': True}
+
+new_house = my_house.copy()
+
+square_numbers.keys()
+# dict_keys([1, 2, 3, 4, 5])
+
+square_numbers.values()
+# dict_values([1, 4, 9, 16, 25])
+
+
+square_numbers.pop(1)
+# 1
+
+print(square_numbers)
+# {2: 4, 3: 9, 4: 16, 5: 25}
+
+
+square_numbers.popitem()
+
+# (5, 25)
+
+print(square_numbers)
+# {1: 1, 2: 4, 3: 9, 4: 16}
+
+
+names = ('Luke', 'Chris', 'Liam')
+
+surname = ('Hemsworth')
+
+famous_siblings = dict.fromkeys(names, surname)
+
+print(famous_siblings)
+# {'Luke': 'Hemsworth', 'Chris': 'Hemsworth', 'Liam': 'Hemsworth'}
+
+# ...
+famous_siblings = {}.fromkeys(names, surname)
+
+print(famous_siblings)
+# {'Luke': 'Hemsworth', 'Chris': 'Hemsworth', 'Liam': 'Hemsworth'}
+
+new_dictionary = { }.fromkeys([1, 2, 3, 4, 5], 0)
+
+print(new_dictionary)
+# {1: 0, 2: 0, 3: 0, 4: 0, 5: 0}
