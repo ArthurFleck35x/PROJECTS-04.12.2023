@@ -1,0 +1,73 @@
+block-head:
+  block line 1
+  block line 2
+
+def new_function():
+  print('Function defined!')
+
+# 1
+def function1():
+  # function code…
+
+# 2
+def function2() {
+  # function code…
+}
+
+# 3
+def function 3(
+  # function code…
+}
+
+# 4
+def function 4()
+  # function code…
+
+
+# 1
+
+
+# To define
+def new_func():
+  print ('Function time!')
+
+# To call
+new_func()
+
+
+def func(x):
+  ans = x * x
+  print(ans)
+
+# With a variable
+num = 5
+func(num)
+
+# Directly
+func(5)
+#25
+
+
+x = 4
+y = 2
+def mean(a, b):
+  print((a + b) / 2)
+
+mean(x,y)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
