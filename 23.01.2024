@@ -1,0 +1,95 @@
+def print_info(name, age, gender):
+  print('Name: ', name)
+  print('Age: ', age)
+  print('Gender: ', gender)
+  return
+
+print_info(
+  name = 'Seba',
+  gender = 'male',
+  age = 21
+)
+
+"""Name: Seba
+Gender: male
+Age: 21"""
+
+
+def print_info(name, gender, age = 20):
+  print('Name: ', name)
+  print('Age: ', age)
+  print('Gender: ', gender)
+  return
+
+print_info(
+  name = 'Seba', 
+  gender = 'male'
+)
+
+"""Name: Seba
+Gender: male
+Age: 20"""
+
+
+def foo(name, salary = 1500, department):
+  print('Name: ',  name)
+  print('Salary: ', salary)
+  print('Department: ', department)
+
+name = 'John'
+department = 'IT'
+
+foo(name, department)
+
+
+def return_func():
+  print ('Print!')
+  return 'Return!'
+
+print(return_func())
+#Print!
+#Return!
+
+
+
+def sum():
+  x = 5
+  y = 7
+  sum =x+y
+  return sum
+
+  def out_func(num):
+  def in_func(num):
+    return num + 1
+  num_1 = in_func(num)
+  print(num, num_1)
+
+  #NameError: name 'in_func' is not defined
+
+
+out_func(5)
+# 5 6
+
+def outer(num):
+  def inner(num):
+    return num - 2
+  nums = inner(num)
+  print(num, nums)
+
+outer(3)
+#31
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
