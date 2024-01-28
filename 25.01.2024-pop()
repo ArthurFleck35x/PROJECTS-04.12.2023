@@ -1,0 +1,19 @@
+# Welcome to the Python coding playground. 
+# Use these lists:
+
+smallerNumbers = [1, 3, 5, 7]
+biggerNumbers = [7, 9,  11]
+
+
+# Entfernen des Elements an einem bestimmten Index
+third_element = smallerNumbers.pop(2)
+
+
+# Entfernen des letzten Elements aus der Liste
+last_element = smallerNumbers.pop()
+
+print("Die Liste nach dem Entfernen des letzten Elements: ", smallerNumbers)
+print("Das letzte Element, das entfernt wurde: ", last_element)
+print("Die Liste nach dem Entfernen des dritten Elements: ", smallerNumbers)
+print("Das dritte Element, das entfernt wurde: ", third_element)
+
