@@ -1,0 +1,21 @@
+# Erstellen Sie ein Dictionary mit den Schlüsseln von 'a' bis 'x' und initialisieren Sie die Werte mit None
+personen = dict.fromkeys([chr(i) for i in range(ord('a'), ord('x')+1)], None)
+
+print("Initialisiertes Dictionary:")
+print("Schlüssel:", personen.keys())
+print("Werte:", personen.values())
+
+# Aktualisieren Sie die Werte für jede Person
+for schlüssel in personen.keys():
+    personen[schlüssel] = "Person " + schlüssel.upper()
+
+print("\nAktualisiertes Dictionary:")
+print("Schlüssel:", personen.keys())
+print("Werte:", personen.values())
+
+# Löschen Sie alle Elemente im Dictionary
+personen.clear()
+
+print("\nGelöschtes Dictionary:")
+print("Schlüssel:", personen.keys())
+print("Werte:", personen.values())
