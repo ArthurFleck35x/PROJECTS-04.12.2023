@@ -1,0 +1,88 @@
+cube_func = lambda x: x**3
+print(cube_func(2))
+
+# Output: 8
+
+foo = [1, 2, 3, 4, 5, 6]
+print(list(filter( \
+  lambda x: x % 2 == 0,foo
+)))
+
+# Output: [2, 4, 6]
+
+# Basic function defined to be
+# the return value of another one:
+def square(x): return x ** 2
+
+# Assigning square function
+# to a variable:
+calc_square = square
+
+# Passing a function as an argument:
+def calculate(x, func):
+  return func(x)
+
+result = calculate(2, calc_square)
+print(result)
+# Output: 4
+
+sum = ??? x, y: x + y
+multiply = lambda a, b: a * b
+
+result = ???(sum(2, 3),4)
+???(result)
+
+# Output: ???
+
+sum = lamba x, y: x + y
+multiply = lambda a, b: a * b
+
+result = multiply (sum(2, 3),4)
+print(result)
+
+# Output: 20
+
+#Which of the below is a main concept of functional programming?
+#Using pure functions
+
+#A shared state is any kind of memory object (a variable, collection of variables or an object) which is accessible from multiple scopes.
+
+#Which statement is not true regarding immutable objects?
+#immututable objects are easily modifiable at any time after creation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
