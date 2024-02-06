@@ -1,0 +1,8 @@
+def something(x):
+    week = {1: "Monday", 2: "Tuesday", 3: "Wednesday", 4: "Thursday", 5: "Friday", 6: "Saturday", 7: "Sunday"}
+    if 0 <= x < 6:
+        print(f"x is between 0 and 6. It's {week[x+1]}")
+    elif x < 0 or x >= 6:
+        print("x is not between 0 and 6.")
+    else:
+        print("Invalid input.")
