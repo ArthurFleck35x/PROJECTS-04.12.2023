@@ -1,0 +1,59 @@
+#Is Python considered a functional language?
+#no
+
+#What two adjectives describe a function which causes no side-effects and has a valid output for every input?
+#Pure& Total
+
+def generate_ints(N):
+  for i in range(N):
+    yield i
+
+# without comprehension
+for element in list:
+  if condition1(element) and condition2(element):
+    collection.append(element)
+  else:
+    new = mutate(element)
+    collection.append(element)
+
+# with comprehension
+collection = [e if condition1(e) and condition2(e) else modify(e) for e in list]
+
+#What keyword makes a function a generator?
+#yield
+
+def square(x):
+    return x * x
+
+square = lambda x: x * x
+
+filter(lambda x: x % 3 == 0, foo)
+
+
+l = [-1,-2,3,-4,5,6]
+
+new = filter(lambda x: x>0, l)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
