@@ -1,0 +1,171 @@
+map(function_here, input_list,
+  optional_another_input_list, ...)
+
+  scores = [1, 0, 4, 5]
+newscores = []
+for i in scores:
+  newscores.append(i+2)
+
+  scores = [1, 0, 4, 5]
+newscores = list(map(lambda x: x+2, scores))
+
+promises = ['learn css', 'learn js', 'buy milk', 'be excellent to each other']
+promises = map(make_good, promises)
+
+
+filter(function, iterable)
+prices = (1.29, 1.99, 2.30, 2.99, 1.80)
+
+def less_than_two(element):
+  return element < 2
+
+filter(less_than_two, prices)
+#(1.29, 1.99, 1.8)
+
+
+customers =
+  [('Jack', 'jack@corporate.com', True),
+  ('Liz', 'liz@example.com', True),
+  ('Sam', 'sam@corporate.com', True),
+  ('Jess', 'jess@corporate.com', False)]
+
+def special_function(customer):
+  if len(customer[1]) > 0:
+    return 'corporate.com' in customer[1]
+    and customer[2]
+  return False
+
+print(filter(special_function, customers))
+
+
+#The 3-tuples of customers where the associated boolean is True and the email includes the substring 'corporate.com'.
+
+
+reduce(function, iterable[, initializer])
+
+class Storage:
+  ... #truncated
+class StorageCollection:
+  ... #truncated
+
+def totalUsableSpace(totalStorage,
+                        storage):
+  if storage.filesystem == "APFS" or
+     storage.filesystem == "HFS":
+    return int(totalStorage) + storage.size
+  else:
+    return int(totalStorage)
+
+drive1 = Storage(2000, "APFS")
+drive2 = Storage(2000, "NTFS")
+drive3 = Storage(1500, "exFAT")
+drive4 = Storage(3000, "HFS")
+
+collection = StorageCollection()
+collection.add(drive1, drive2,
+                drive3, drive4)
+
+print(reduce(totalUsableSpace, collection))
+
+max(iterable, *iterables [,key, default])
+# or
+max(arg1, arg2, *args [, key])
+
+max(arg1, arg2, *args [, key])
+
+# using max(arg1, arg2, *args)
+max(1, 1, 1, 5, 2)
+# result = 5
+
+# using max(iterable)
+num = [1, 1, 1, 1, 3, 2, 10]
+max(num)
+# result = 10
+
+num1 = [1200, 110000, 90, 9012]
+num2 = [12, 12, 12, 30, 30, 90]
+print(max(num1, num2, key=len))
+# result = [12, 12, 12, 30, 30, 90]
+
+queue1 = [3, 4, 6, 2, 4, 3]
+queue2 = [3, 2, 6, 9, 4, 2]
+print(max(queue1,
+          queue2,
+          key=lambda x: sum(x)/len(x)))
+
+sorted(iterable [, key] [, reverse])
+sorted([5, 2, 3, 1, 4])
+#[1, 2, 3, 4, 5]
+
+sorted([5, 2, 3, 1, 4], reverse=True)
+#[5, 4, 3, 2, 1]
+
+pyString = ',.()-.12345ABCDabcd='
+print(sorted(pyString))
+# result:
+# ['(', ')', ',', '-', '.', '.',
+#  '1', '2', '3', '4', '5', '=',
+#  'A', 'B', 'C', 'D',
+#  'a', 'b', 'c', 'd']
+
+print(sorted([4, 0, 2, 3, 1, 5]))
+#[0,1,2,3,4,5]
+
+class Order(object):
+  def __init__(self, name, number):
+    self.name = name
+    self.number = number
+  def __repr__(self):
+    return f'({self.name}, {self.number})'
+
+list = [Order('tom', 22),
+        Order('bob', 55),
+        Order('sam', 60),
+        Order('alice', 10)]
+
+def getNum(order):
+  return order.number
+
+print(sorted(list, key=getNum))
+
+# result:
+# [(alice, 10), (tom, 22),
+#  (bob, 55), (sam, 60)]
+
+class Resident(object):
+  def __init__(self, name, floor, number):
+    self.name = name
+    self.floor = floor
+    self.number = number
+
+list = [Resident('John', 1, 12),
+        Resident('Cat', 3, 14),
+        Resident('Boris', 6, 45),
+        Resident('Bea', 2, 10)]
+
+def getFloor(resident):
+  return resident.floor
+
+print(sorted(list, key=getFloor))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
