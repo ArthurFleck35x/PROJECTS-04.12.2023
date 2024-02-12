@@ -1,0 +1,238 @@
+def outer_function():
+  scoped = "Hey!"
+  def inner_function():
+    print(scoped)
+  #copy of the function object
+  return inner_function
+
+inner_copy = outer_function()
+# executing the function
+inner_copy()
+# Hey!
+
+#Alongside the function definition, a closure contains the function's
+#scoped variables
+
+def say_hello(name):
+  return f"Hello, {name}!"
+
+  <h2>Hello, Mike!</h2>
+
+def hello_heading(name):
+  return f"<h2>{say_hello(name)}</h2>"
+
+def say_goodbye(name):
+  return f"Goodbye, {name}!"
+
+def goodbye_heading(name):
+  return f"<h2>{say_goodbye(name)}</h2>"
+
+def h2_decorate(string_function):
+  def func_wrapper(name):
+    return f"<h2>{string_function(name)}</h2>"
+  return func_wrapper
+
+ hello_wrapper = h2_decorate(say_hello)
+goodbye_wrapper = h2_decorate(say_goodbye)
+print(hello_wrapper("Mike"))
+print(goodbye_wrapper("Sam"))
+# <h2>Hello, Mike!</h2>
+# <h2>Goodbye, Sam!</h2>
+
+#The number of similar-looking functions that can be decorated using the same decorator is
+#as many as needed
+
+def say_hello(name):
+    return f"Hello, {name}!"
+
+def h2_decorate(string_function):
+    def func_wrapper(name):
+        return f"<h2>{string_function(name)}</h2>"
+    return func_wrapper
+
+hello_wrapper = h2_decorate(say_hello)
+
+def h2_decorate(string_function):
+  def func_wrapper(name):
+    return f"<h2>{string_function(name)}</h2>"
+  return func_wrapper
+
+@h2_decorate
+def say_hello(name):
+  return f"Hello, {name}!"
+
+print(say_hello("Mike"))
+# <h2>Hello, Mike!</h2>
+
+# variable assignment
+def say_hello(name):
+   return f"Hello, {name}!"
+long_wrap = div_decorate(h2_decorate(say_hello))
+print(long_wrap("Mike"))
+
+# @ notation
+@div_decorate
+@h2_decorate
+def say_hello(name):
+  return f"Hello, {name}!"
+print(say_hello("Mike"))
+
+#<div><h2>Hello, Mike!</h2></div>
+
+def tags_wrapper(tag):
+  def func_decorator(string_function):
+    def name_wrapper(name):
+      return f"<{tag}>{string_function(name)}</{tag}>"
+    return name_wrapper
+  return func_decorator
+
+@tags_wrapper("div")
+@tags_wrapper("h2")
+def say_hello(name):
+  return f"Hello, {name}!"
+print(say_hello("Mike"))
+# <div><h2>Hello, Mike!</h2><div>
+
+@tags_wrapper("h2")
+@tags_wrapper("em")
+def say_goodbye(name):
+  return f"Goodbye, {name}!"
+print(say_goodbye("Mike"))
+# <h2><em>Goodbye, Mike!<em></h2>
+
+# A
+foo = decorator(foo)
+# B
+@decorator
+def foo():
+  ...
+# C
+def decorator():
+  def foo():
+    ...
+# D
+@decorator(param)
+def foo():
+  ...
+
+#C is valid
+
+# define a decorator
+def get_fahrenheit(method):
+  # as this decorator potentially targets
+  # methods, pass self as a parameter
+  def wrapper(self):
+    # "self" argument is passed
+    return f"{method(self) * 1.8 + 32} F"
+  return wrapper
+
+class Temperature(object):
+  def __init__(self, celsius):
+    self.degrees = celsius
+
+  @get_fahrenheit
+  def get_temp(self):
+    return self.degrees
+
+temp = Temperature(15)
+print(temp.get_temp())
+# 59.0 F
+
+def get_fahrenheit(method):
+  # expect any number of args/named args
+  def wrapper(*args, **kwargs):
+    return f"{method(*args, **kwargs) * 1.8 + 32} F"
+  return wrapper
+
+class Temperature(object):
+  def __init__(self, celsius):
+    self.degrees = celsius
+
+  @get_fahrenheit
+  # two extra arguments expected here
+  def get_temp(self, extra1, extra2=0, extra3=0):
+    return self.degrees + extra1 + extra2 + extra3
+
+temp = Temperature(15)
+# self is passed by default
+print(temp.get_temp(3, extra2=1))
+# 66.2 F (instead of 59.0F)
+
+
+
+# A
+def deco(func):
+  def wrapper(*args, **kwargs):
+    ...
+# B
+def deco(func):
+  def wrapper(**args, *kwargs):
+    ...
+# C
+def deco(func):
+  def wrapper(self):
+    ...
+# D
+def deco(func):
+  def wrapper(self, args, kwargs):
+    ...
+
+#bin mir hier unsicher
+
+def h2_decorate(string_function):
+  def func_wrapper(name):
+    return f"<h2>{string_function(name)}</h2>"
+  return func_wrapper
+
+@h2_decorate
+def say_hello(name):
+  """docstring"""
+  return f"Hello, {name}!"
+print(say_hello.__name__)
+
+"""func_wrapper
+# instead of expected
+say_hello"""
+
+
+from functools import wraps
+
+def h2_decorate(string_function):
+  @wraps(string_function)
+  def func_wrapper(name):
+    return f"<h2>{string_function(name)}</h2>"
+  return func_wrapper
+
+print(say_hello.__name__)
+print(say_hello.__doc__)
+# say_hello
+# docstring
+
+
+def my_generator(n):
+  print('First print:')
+  yield n
+  n=n+1
+  print('Second print:')
+  yield n
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
