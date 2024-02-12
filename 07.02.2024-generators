@@ -1,0 +1,173 @@
+def test_generator():
+    yield 1
+    yield 2
+    yield 3
+
+g = test_generator()
+
+
+print(next(g)) # 1
+print(next(g)) # 2
+print(next(g)) # 3
+print(next(g)) # StopIteration error
+
+
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+StopIteration
+
+
+def range_gen(n):
+  i = 0
+  while i < n:
+    yield i
+    i += 1
+
+    >>> gen = range_gen(3)
+>>> print(next(gen))
+0
+>>> print(next(gen))
+1
+>>> print(next(gen))
+2
+>>> print(next(gen))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+StopIteration
+
+
+def countdown(num):
+  while num > 0:
+    yield num
+    num -= 1
+
+>>> gen = countdown(5)
+>>> print(next(gen))
+#5
+
+def infinity(start):
+  yield start
+  for x in infinity(start + 1)
+    yield x
+
+def infinity(start):
+  yield start
+  yield from infinity(start + 1)
+
+gen = infinity(20)
+print(next(gen)) # 20
+print(next(gen)) # 21
+
+def list_gen(l):
+  if l:
+    yield l[0]
+    yield from list_gen(l[1:])
+
+def cubic_generator(n):
+	for i in range(n):
+		yield i ** 3
+#list_gen
+
+def fibonacci():
+    #Generating fibonacci sequence
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b
+
+def firstn(g, n):
+	for i in range(n):
+		yield next(g)
+
+print(list(firstn(fibonacci(), 10)))
+
+# Output:
+# [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+def perfect_square():
+  x = 1
+  while True:
+    yield x * x
+    x += 1
+def first_n(g,n):
+    for i in range(n):
+      yield next(g)
+
+    def my_gen(number):
+  number -= 1
+  yield number
+  yield number
+  number += 1
+  yield number
+
+temp = my_gen(10)
+print(next(temp))
+print(next(temp))
+#99
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
